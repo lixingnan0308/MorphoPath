@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Model weights (download separately — see README)
+*.bin
+pytorch_model*.bin
+pytorch_model_uni.bin
+# Keep the small bundled concept anchors (tracked explicitly)
+!src/*.pt
+
+# Data / features / slides
+*.svs
+*.ndpi
+*.tif
+*.tiff
+*.h5
+*.hdf5
+
+# Experiment outputs
+results/
+results_*/
+logs/
+wandb/
+visual/*/                      # rendered slide overlays
+*.log
+
+# Large media (commit final paper PDFs/PNGs deliberately if needed)
+*.zip
+
+# Claude Code session/local config
+.claude/

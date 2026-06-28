@@ -1,0 +1,26 @@
+# ---- Core: model / training / inference (src/) ----
+torch>=2.0
+numpy
+pandas
+openpyxl          # pandas .xlsx label files
+h5py              # per-slide feature .h5
+scikit-learn
+
+# ---- Prognosis (prognosis/) ----
+lifelines         # Kaplan-Meier, log-rank, Cox PH
+matplotlib        # survival / interpretability figures
+scipy
+python-docx       # Cox table export to .docx (build_cox_docx.py)
+                  # NOTE: cox_multivariate_table.py also needs a LaTeX install (pdflatex) for the PDF table
+
+# ---- Interpretability visualisation (visualization/) ----
+openslide-python  # also needs the OpenSlide C library: brew install openslide / apt-get install openslide-tools
+Pillow
+
+# ---- Feature extraction only (feature_extraction/) ----
+# WSI tiling + UNI (ViT-L/16) patch encoding. Install if generating features
+# from raw slides instead of using precomputed .h5.
+timm>=0.9.8
+torchvision
+scikit-image
+tqdm
